@@ -1,11 +1,9 @@
 import axios, { AxiosError } from 'axios';
-import dotenv from 'dotenv';
 
 
 
 export async function generateRecipe(prompt: string): Promise<string> {
     
-    dotenv.config();
 
     const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 
