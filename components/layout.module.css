@@ -1,0 +1,32 @@
+
+
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navLogo {
+  /* You can add logo specific styling here */
+}
+
+.navLinks a {
+  font-weight: bold;
+  color: #4CAF50; /* A shade of green */
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.footer {
+  background-color: #FAFAFA;
+  color: #666;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.875rem;
+}
+
+.footer a {
+  color: #4CAF50;
+}

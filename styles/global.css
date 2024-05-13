@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.star {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  background-color: transparent;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+  );
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  border: 2px solid black; /* Solid black border */
+}
+
+.star.filled {
+  background-color: gold;
+  border-color: black; /* Maintain black border when filled */
+}
+
+.card {
+  position: relative; /* This makes it the reference for positioning the star */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden; /* Keeps everything inside the borders of the card */
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Set a fixed height or keep it responsive */
+  object-fit: cover; /* Ensures the image covers the area */
+}
+
+.star-icon {
+  position: absolute;
+  top: 8px; /* Adjusts the top distance */
+  right: 8px; /* Adjusts the right distance */
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.recipeCard {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.recipeCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
