@@ -34,7 +34,7 @@ export async function generateRecipe(prompt: string): Promise<string> {
         if (axios.isAxiosError(error)) {
             const axiosError = error as AxiosError;
             if (axiosError.response) {
-                errorMessage = axiosError.response.data.message || JSON.stringify(axiosError.response.data);
+                errorMessage = (axiosError.response.data as { message?: string })?.message || JSON.stringify(axiosError.response.data);
             } else {
                 errorMessage = axiosError.message;
             }
